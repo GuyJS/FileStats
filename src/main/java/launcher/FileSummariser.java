@@ -36,6 +36,7 @@ public class FileSummariser {
    /**
     * Opens and reads the file at the given path if it exists, passes the contents to a {@link FileContentsAnalyser} to process and prints the summary
     * that's returned to the {@link PrintStream} provided on construction. Handles any errors associated with being unable to locate or open the file.
+    *
     * @param filePath the path to the file to process, should be in a format accepted by {@link File}'s constructor.
     */
    public void summariseFile(String filePath) {

@@ -28,8 +28,9 @@ public class FileContentsAnalyser {
     * Words are identified by splitting using a regex that includes any whitespace character along with optional punctuation either before
     * or after the whitespace. Additional punctuation is removed via regex to handle punctuation at the beginning or end of each line which
     * {@link String#split(String)} will miss out. Zero length words are also filtered out to handle entirely blank lines.
+    *
     * @param fileLines the lines of the file to analyse in a {@link Stream}.
-    * @return a new {@link FileSummary} object containing the information about the file. 
+    * @return a new {@link FileSummary} object containing the information about the file.
     */
    public FileSummary analyseFileContentsAndPrintSummary(Stream<String> fileLines) {
       Map<Integer, List<String>> wordMap = fileLines.parallel()
@@ -44,7 +45,8 @@ public class FileContentsAnalyser {
 
    /**
     * Strips punctuation from the start and end of a word. Repeatedly checks whether the word starts or ends with a punctuation character
-    * defined via the {@link #PUNCTUATION} regex and removes it using {@link String#substring(int, int)} until all punctutation has been removed.
+    * defined via the {@link #PUNCTUATION} regex and removes it using {@link String#substring(int, int)} until all punctuation has been removed.
+    *
     * @param word the word to remove punctuation from.
     * @return the word with any punctuation at the start or end removed.
     */

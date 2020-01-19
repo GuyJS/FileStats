@@ -7,6 +7,9 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit tests for {@link FileContentsAnalyser}.
+ */
 class FileContentsAnalyserTest {
 
    private FileContentsAnalyser systemUnderTest = new FileContentsAnalyser();
@@ -78,7 +81,7 @@ class FileContentsAnalyserTest {
       Assertions.assertEquals(1, wordMap.get(3).size());
       Assertions.assertEquals(1, wordMap.get(4).size());
    }
-   
+
    @Test
    public void shouldStripOutEmptyLines() {
       Map<Integer, List<String>> wordMap = systemUnderTest.analyseFileContentsAndPrintSummary(

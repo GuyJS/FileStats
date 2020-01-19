@@ -110,7 +110,7 @@ public class FileSummary {
          return values.poll().toString();
       } else {
          Queue<Integer> sortedValues = values.stream().sorted().collect(toCollection(LinkedList::new));
-         return convertValuesToStringRecursive(values.poll().toString(), sortedValues);
+         return convertValuesToStringRecursive(sortedValues.poll().toString(), sortedValues);
       }
    }
 
