@@ -45,7 +45,6 @@ public class FileSummariser {
          fileSummary.printSummaryTo(printStream);
       } catch (IOException ioException) {
          System.err.println("File not found, path: " + filePath);
-         ioException.printStackTrace();
       }
    }
 }
